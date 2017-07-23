@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.pagination {
+   margin:0px;
+   padding:0px;
+   overflow: hidden;
+   font-size:12px;
+   font-family:'微软雅黑';
+}
+.pagination a {
+   display: inline-block;
+   height: 26px;
+   min-width: 26px;
+   padding: 2px;
+   border: 1px solid #add8e6;
+   line-height: 26px;
+   text-align: center;
+   text-decoration: none;
+   color: #333;
+   border-radius: 4px;
+   margin:0px 3px;
+}
+
+.pagination span {
+   margin: 0 5px;
+}
+
+.pagination a.currentPage {
+   background-color: #80e3f0;
+}
+.pagination a.prev , .pagination a.next {
+   padding:2px 6px;
+}
+.pagination a.currentPage.prev , .pagination a.currentPage.next {
+   border:1px solid #eee;
+   background: #eee;
+}
+.pagination>.input {
+   outline: none;
+   padding:2px 15px;
+}
+.pagination>.input:focus {
+   border-color: #348ace;
+}
+.pagination>.btn {
+   padding:2px 10px;
+   background-color: #3c9eed;
+   color: #fff;
+}
+.pagination>.btn:hover {
+   background-color: #25bafc;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <link rel="stylesheet" href="css/pagination.css" />
+</head>
+<body>
+
+<div id="pagination" class="pagination">
+   <!--<a href="javascript:void(0)">上一页</a>
+   <a href="javascript:void(0)" class="currentPage">1</a>
+   <span href="javascript:void(0)">...</span>
+   <a href="javascript:void(0)">2</a>
+   <a href="javascript:void(0)">3</a>
+   <a href="javascript:void(0)">4</a>
+   <a href="javascript:void(0)">5</a>
+   <a href="javascript:void(0)">6</a>
+   <a href="javascript:void(0)">7</a>
+   <span href="javascript:void(0)">...</span>
+   <a href="javascript:void(0)">9</a>
+   <span>-</span>
+   <a href="javascript:void(0)" class="input" contenteditable="true">1</a>
+   <a href="javascript:void(0)" class="btn">查询</a>
+   <a href="javascript:void(0)">下一页</a>-->
+</div>
+<br><br><br>
+
+<div id="pagination1" class="pagination"></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script>
+   $('#pagination').Pagination({
+      total: 100,//最大页码
+      currentPage: 0,//当前页码
+//      num_edge_entries: 1,//边缘页码
+//      display_num: 4,//中间加载条数，不传默认为8
+//      opt_layout_findInput: true,//是否加载输入框查询，不传默认为false
+      /**
+       * 执行ajax的函数
+       * @param id 页码 0为第一页
+       */
+      callback: function (id) {
+         console.log('id+page = ' + id)
+      }
+   });
+   $('#pagination1').Pagination({
+      total: 70,//最大页码
+      currentPage: 0,//当前页码
+      num_edge_entries: 1,//边缘页码，默认为1
+      display_num: 4,//中间加载条数，不传默认为8
+      opt_layout_findInput: true,//是否加载输入框查询，不传默认为false
+      /**
+       * 执行ajax的函数
+       * @param id 页码 0为第一页
+       */
+      callback: function (id) {
+         console.log('id+page = ' + id)
+      }
+   });
+</script>
+</body>
+</html>
